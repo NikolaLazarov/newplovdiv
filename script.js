@@ -1,4 +1,4 @@
-// Plovdiv Website Interactive Features
+// Plovdiv Municipality Website Interactive Features
 
 document.addEventListener('DOMContentLoaded', function() {
     // Text size controls
@@ -27,27 +27,42 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Card button interactions
-    const cardBtns = document.querySelectorAll('.card-btn');
-    cardBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-            const cardTitle = this.closest('.card').querySelector('h2').textContent;
-            alert(`Заявление за: ${cardTitle} - Функционалността ще бъде имплементирана`);
+    // Service card interactions
+    const serviceCards = document.querySelectorAll('.service-card');
+    serviceCards.forEach(card => {
+        card.addEventListener('click', function() {
+            const serviceTitle = this.querySelector('h3').textContent;
+            alert(`Достъп до услуга: ${serviceTitle} - Функционалността ще бъде имплементирана`);
         });
     });
 
-    // Status check functionality
-    const statusBtn = document.querySelector('.status-btn');
-    const statusInput = document.querySelector('.status-input');
-    
-    statusBtn.addEventListener('click', function() {
-        const statusNumber = statusInput.value.trim();
-        if (statusNumber) {
-            alert(`Проверка на статус за: ${statusNumber} - Функционалността ще бъде имплементирана`);
-        } else {
-            alert('Моля, въведете номер на заявление');
-        }
+    // News link interactions
+    const newsLinks = document.querySelectorAll('.news-link');
+    newsLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('Прочети повече - Функционалността ще бъде имплементирана');
+        });
     });
+
+    // Contact form submission
+    const contactForm = document.querySelector('.contact-form form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            const name = formData.get('name') || this.querySelector('input[type="text"]').value;
+            const email = formData.get('email') || this.querySelector('input[type="email"]').value;
+            const message = formData.get('message') || this.querySelector('textarea').value;
+            
+            if (name && email && message) {
+                alert('Съобщението е изпратено успешно! Ще се свържем с вас скоро.');
+                this.reset();
+            } else {
+                alert('Моля, попълнете всички полета.');
+            }
+        });
+    }
 
     // Smooth scrolling for navigation links
     const navLinks = document.querySelectorAll('.nav-link');
@@ -63,16 +78,17 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Hero CTA button
-    const heroCta = document.querySelector('.hero-cta');
-    heroCta.addEventListener('click', function() {
-        alert('Към картата - Функционалността ще бъде имплементирана');
-    });
-
     // Language selector
     const languageSelector = document.querySelector('.language-selector');
     languageSelector.addEventListener('click', function() {
-        alert('Превключване на език - Функционалността ще бъде имплементирана');
+        const currentLang = this.querySelector('.active').textContent;
+        const newLang = currentLang === 'BG' ? 'EN' : 'BG';
+        
+        this.querySelector('.active').textContent = newLang;
+        this.querySelector('.active').className = '';
+        this.querySelector('span:not(.separator)').className = 'active';
+        
+        alert(`Езикът е променен на: ${newLang} - Функционалността ще бъде имплементирана`);
     });
 
     // Login button
@@ -81,15 +97,15 @@ document.addEventListener('DOMContentLoaded', function() {
         alert('Вход в системата - Функционалността ще бъде имплементирана');
     });
 
-    // Objects counter
-    const objectsCounter = document.querySelector('.objects-counter');
-    objectsCounter.addEventListener('click', function() {
-        alert('Списък с обекти - Функционалността ще бъде имплементирана');
+    // Services counter
+    const servicesCounter = document.querySelector('.services-counter');
+    servicesCounter.addEventListener('click', function() {
+        alert('Списък с услуги - Функционалността ще бъде имплементирана');
     });
 
-    // Add hover effects for cards
-    const cards = document.querySelectorAll('.card');
-    cards.forEach(card => {
+    // Add hover effects for feature cards
+    const featureCards = document.querySelectorAll('.feature-card');
+    featureCards.forEach(card => {
         card.addEventListener('mouseenter', function() {
             this.style.transform = 'translateY(-8px)';
         });
@@ -103,6 +119,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const allButtons = document.querySelectorAll('button');
     allButtons.forEach(button => {
         button.addEventListener('click', function() {
+            if (this.type === 'submit') return; // Skip form submit buttons
+            
             const originalText = this.textContent;
             this.textContent = 'Зареждане...';
             this.disabled = true;
@@ -114,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Statistics counter animation
+    // Statistics counter animation for hero stats
     const statNumbers = document.querySelectorAll('.stat-number');
     const observerOptions = {
         threshold: 0.5,
@@ -125,8 +143,11 @@ document.addEventListener('DOMContentLoaded', function() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const target = entry.target;
-                const finalNumber = parseInt(target.textContent.replace(/,/g, ''));
-                animateCounter(target, 0, finalNumber, 2000);
+                const finalText = target.textContent;
+                const finalNumber = parseInt(finalText.replace(/[^0-9]/g, ''));
+                const suffix = finalText.replace(/[0-9,]/g, '');
+                
+                animateCounter(target, 0, finalNumber, 2000, suffix);
                 observer.unobserve(target);
             }
         });
@@ -134,7 +155,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     statNumbers.forEach(stat => observer.observe(stat));
 
-    function animateCounter(element, start, end, duration) {
+    function animateCounter(element, start, end, duration, suffix = '') {
         const startTime = performance.now();
         const startNumber = start;
         const difference = end - start;
@@ -144,7 +165,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const progress = Math.min(elapsed / duration, 1);
             
             const currentNumber = Math.floor(startNumber + (difference * progress));
-            element.textContent = currentNumber.toLocaleString();
+            element.textContent = currentNumber.toLocaleString() + suffix;
             
             if (progress < 1) {
                 requestAnimationFrame(updateCounter);
@@ -158,7 +179,7 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', function() {
         const scrolled = window.pageYOffset;
         const heroSection = document.querySelector('.hero-section');
-        const rate = scrolled * -0.5;
+        const rate = scrolled * -0.3;
         
         if (heroSection) {
             heroSection.style.transform = `translateY(${rate}px)`;
@@ -170,6 +191,15 @@ document.addEventListener('DOMContentLoaded', function() {
     mobileMenuToggle.className = 'mobile-menu-toggle';
     mobileMenuToggle.innerHTML = '<i class="fas fa-bars"></i>';
     mobileMenuToggle.style.display = 'none';
+    mobileMenuToggle.style.cssText = `
+        background: #00a4dc;
+        border: none;
+        color: white;
+        padding: 10px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 18px;
+    `;
     
     const mainNav = document.querySelector('.main-nav');
     mainNav.appendChild(mobileMenuToggle);
@@ -195,10 +225,65 @@ document.addEventListener('DOMContentLoaded', function() {
             navCenter.style.display = 'flex';
             navCenter.style.flexDirection = 'column';
             navCenter.style.gap = '15px';
+            navCenter.style.marginTop = '20px';
         } else {
             navCenter.style.display = 'none';
         }
     });
 
-    console.log('Пловдив - Технологична дестинация уебсайт зареден успешно!');
+    // Add smooth reveal animation for sections
+    const sections = document.querySelectorAll('section');
+    const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => {
+        section.style.opacity = '0';
+        section.style.transform = 'translateY(30px)';
+        section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        sectionObserver.observe(section);
+    });
+
+    // Add typing effect to hero subtitle
+    const heroSubtitle = document.querySelector('.hero-subtitle');
+    if (heroSubtitle) {
+        const text = heroSubtitle.textContent;
+        heroSubtitle.textContent = '';
+        
+        let i = 0;
+        function typeWriter() {
+            if (i < text.length) {
+                heroSubtitle.textContent += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 50);
+            }
+        }
+        
+        // Start typing effect after a short delay
+        setTimeout(typeWriter, 1000);
+    }
+
+    // Add floating animation to coat of arms
+    const coatOfArms = document.querySelector('.coat-of-arms');
+    if (coatOfArms) {
+        coatOfArms.style.animation = 'float 3s ease-in-out infinite';
+        
+        // Add CSS animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes float {
+                0%, 100% { transform: translateY(0px); }
+                50% { transform: translateY(-5px); }
+            }
+        `;
+        document.head.appendChild(style);
+    }
+
+    console.log('Община Пловдив уебсайт зареден успешно!');
+    console.log('Municipality of Plovdiv website loaded successfully!');
 });

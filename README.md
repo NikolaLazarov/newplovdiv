@@ -1,145 +1,177 @@
-# Пловдив - Технологична дестинация | Plovdiv - Technology Destination
+# Община Пловдив | Municipality of Plovdiv
 
 ## Описание | Description
 
-Този уебсайт е дизайниран като модерна версия на портала за Пловдив, използвайки същия шаблон като [Българския кадастрален портал](https://kais.cadastre.bg/), но с дизайн и цветове, вдъхновени от [Пловдивските инвестиционни материали](https://invest.plovdiv.bg/).
+Този уебсайт е официален портал на Община Пловдив, дизайниран с модерен и професионален подход. Уебсайтът използва чисто бял фон, сини акценти (#00a4dc) от инвестиционните материали на Пловдив, и черен основен текст за максимална четливост.
 
-This website is designed as a modern version of the Plovdiv portal, using the same template as the [Bulgarian Cadastre Portal](https://kais.cadastre.bg/), but with design and colors inspired by the [Plovdiv Investment Materials](https://invest.plovdiv.bg/).
+This website is the official portal of the Municipality of Plovdiv, designed with a modern and professional approach. The website uses a clean white background, blue accents (#00a4dc) from Plovdiv's investment materials, and black main text for maximum readability.
 
-## Особености | Features
+## 🎨 Дизайн и цветове | Design & Colors
 
-### 🎨 Дизайн | Design
-- **Същият шаблон като Българския кадастрален портал** | Same template as Bulgarian Cadastre Portal
-- **Модерен, отзивчив дизайн** | Modern, responsive design
-- **Цветова схема вдъхновена от Пловдивските материали** | Color scheme inspired by Plovdiv materials
-- **Градиенти и сенки за модерен вид** | Gradients and shadows for modern look
+### **Цветова схема | Color Scheme**
+- **Основен фон | Main Background**: Бял (#ffffff)
+- **Основен текст | Main Text**: Черен (#000000)
+- **Акценти | Accents**: Син (#00a4dc) - от инвестиционните материали на Пловдив
+- **Вторичен текст | Secondary Text**: Бял (#ffffff) и син (#00a4dc)
+- **Неутрални цветове | Neutral Colors**: Сиви нюанси за подзаглавия
 
-### 🚀 Функционалност | Functionality
-- **Отзивчив дизайн за всички устройства** | Responsive design for all devices
-- **Интерактивни елементи** | Interactive elements
-- **Анимации и преходи** | Animations and transitions
-- **Мобилно меню** | Mobile menu
+### **Дизайн елементи | Design Elements**
+- **Чист, минималистичен дизайн** | Clean, minimalist design
+- **Пловдивски герб** | Plovdiv coat of arms as logo
+- **"Защо Пловдив?" секция** | "Why Plovdiv?" section with investment highlights
+- **Модерни градиенти и сенки** | Modern gradients and shadows
+- **Отзивчив дизайн** | Responsive design for all devices
+
+## 🏛️ Структура на уебсайта | Website Structure
+
+### **1. Горна лента | Top Header**
+- Доступност за незрящи | Accessibility for visually impaired
+- Контроли за размер на текста | Text size controls (A-, A, A+)
+- Търсачка | Search functionality
+- Избор на език | Language selector (BG/EN)
+
+### **2. Основна навигация | Main Navigation**
+- **Пловдивски герб** | Plovdiv coat of arms with motto "ДРЕВЕН И ВЕЧЕН"
+- Информация за общината | Municipality information
+- Навигационни линкове | Navigation links
+- Потребителски действия | User actions
+
+### **3. Главна секция | Hero Section**
+- Заглавие "Община Пловдив" | Title "Municipality of Plovdiv"
+- Подзаглавие "Древен и вечен град" | Subtitle "Ancient and Eternal City"
+- Статистики за града | City statistics
+- Син градиентен фон | Blue gradient background
+
+### **4. "Защо Пловдив?" секция | "Why Plovdiv?" Section**
+Вдъхновена от инвестиционните материали на Пловдив:
+Inspired by Plovdiv's investment materials:
+
+- **ЕФЕКТИВЕН** | **EFFICIENT** - ТОП 10 малки европейски градове
+- **РАЗВИТ** | **DEVELOPED** - Най-добра nearshoring дестинация
+- **СВЪРЗАН** | **CONNECTED** - Стратегическо разположение
+
+### **5. Електронни услуги | Electronic Services**
+6 сини карти с основните услуги:
+6 blue cards with main services:
+- Достъп до кадастър | Access to cadastre
+- Онлайн услуги | Online services
+- Проверка на статус | Status check
+- Статистики | Statistics
+- Сигнализиране | Reporting
+- Подаване на заявки | Submit requests
+
+### **6. Новини и събития | News & Events**
+- Последни новини за града | Latest city news
+- Интерактивни елементи | Interactive elements
+- Линкове за повече информация | Links for more information
+
+### **7. Контакти | Contact**
+- Контактна информация | Contact information
+- Форма за съобщения | Contact form
+- Работно време | Working hours
+
+### **8. Footer**
+- Информация за общината | Municipality information
+- Бързи линкове | Quick links
+- Социални мрежи | Social media
+
+## 🚀 Функционалност | Functionality
+
+### **Интерактивни елементи | Interactive Elements**
 - **Търсачка** | Search functionality
-- **Контроли за размер на текста** | Text size controls
+- **Форма за контакти** | Contact form
+- **Навигация** | Navigation with smooth scrolling
+- **Мобилно меню** | Mobile menu for small screens
+- **Анимации** | Smooth animations and transitions
 
-### 📱 Структура | Structure
-1. **Горна лента** | Top Header Bar
-   - Доступност | Accessibility
-   - Контроли за размер на текста | Text size controls
-   - Търсачка | Search
-   - Избор на език | Language selector
+### **Специални ефекти | Special Effects**
+- **Типиращ ефект** | Typing effect for hero subtitle
+- **Плаващ герб** | Floating animation for coat of arms
+- **Анимирани броячи** | Animated counters for statistics
+- **Паралакс ефект** | Parallax effect on hero section
+- **Плавно появяване** | Smooth reveal animations
 
-2. **Основна навигация** | Main Navigation
-   - Лого и информация | Logo and information
-   - Навигационни линкове | Navigation links
-   - Потребителски действия | User actions
+### **Отзивчивост | Responsiveness**
+- **Мобилни устройства** | Mobile devices
+- **Таблети** | Tablets
+- **Десктоп** | Desktop
+- **Големи екрани** | Large screens
 
-3. **Главна секция** | Hero Section
-   - Заглавие и подзаглавие | Title and subtitle
-   - Call-to-action бутон | Call-to-action button
-
-4. **Карти с услуги** | Service Cards
-   - Инвестиции | Investments
-   - Кадастрални справки | Cadastral references
-   - Технологичен парк | Technology park
-   - Образователни институции | Educational institutions
-
-5. **Новини** | News
-   - Последни новини | Latest news
-   - Интерактивни елементи | Interactive elements
-
-6. **Статистики** | Statistics
-   - Анимирани броячи | Animated counters
-   - Визуално представяне | Visual presentation
-
-## Технологии | Technologies
+## 🛠️ Технологии | Technologies
 
 - **HTML5** - Семантична структура | Semantic structure
 - **CSS3** - Модерни стилове и анимации | Modern styles and animations
-- **JavaScript (ES6+)** - Интерактивност | Interactivity
+- **JavaScript (ES6+)** - Интерактивност и анимации | Interactivity and animations
 - **Font Awesome** - Икони | Icons
-- **Google Fonts** - Типографика | Typography
+- **Google Fonts** - Типографика (Inter) | Typography (Inter)
 
-## Цветова схема | Color Scheme
+## 📱 Особености за мобилни устройства | Mobile Features
 
-### Основни цветове | Primary Colors
-- **Синьо** | Blue: `#1e3a8a`, `#1e40af`, `#3b82f6`
-- **Жълто** | Yellow: `#fbbf24`, `#f59e0b`
-- **Зелено** | Green: `#10b981`, `#059669`
-- **Лилаво** | Purple: `#8b5cf6`, `#7c3aed`
+- **Мобилно меню** | Mobile menu with hamburger icon
+- **Touch-friendly** | Оптимизирано за докосване
+- **Responsive grid** | Отзивчиви мрежи
+- **Оптимизирани изображения** | Optimized images
+- **Бързо зареждане** | Fast loading
 
-### Неутрални цветове | Neutral Colors
-- **Бяло** | White: `#ffffff`
-- **Сиво** | Gray: `#6b7280`, `#9ca3af`
-- **Тъмно** | Dark: `#1f2937`, `#374151`
+## 🎯 Целева аудитория | Target Audience
 
-## Инсталация | Installation
+- **Жители на Пловдив** | Plovdiv residents
+- **Инвеститори** | Investors
+- **Туристи** | Tourists
+- **Бизнес партньори** | Business partners
+- **Държавни служители** | Government officials
 
-1. **Клонирайте проекта** | Clone the project
-   ```bash
-   git clone [repository-url]
-   cd plovdiv-website
-   ```
-
-2. **Отворете файла** | Open the file
-   - Отворете `index.html` в уеб браузър | Open `index.html` in a web browser
-   - Или стартирайте локален сървър | Or start a local server
-
-3. **За локален сървър** | For local server
-   ```bash
-   # Python 3
-   python -m http.server 8000
-   
-   # Node.js
-   npx serve .
-   
-   # PHP
-   php -S localhost:8000
-   ```
-
-## Използване | Usage
-
-### 🎯 Основни функции | Main Functions
-- **Навигация** | Navigation: Използвайте горните линкове | Use the top navigation links
-- **Търсене** | Search: Въведете текст в търсачката | Enter text in the search box
-- **Услуги** | Services: Кликнете на картите за услуги | Click on service cards
-- **Статус** | Status: Проверете статус на заявления | Check application status
-
-### 📱 Мобилно използване | Mobile Usage
-- **Мобилно меню** | Mobile menu: Кликнете на иконата за меню | Click the menu icon
-- **Отзивчив дизайн** | Responsive design: Автоматично се адаптира | Automatically adapts
-- **Touch-friendly** | Оптимизирано за докосване | Touch-optimized
-
-### ♿ Доступност | Accessibility
-- **Контроли за размер на текста** | Text size controls: A-, A, A+
-- **Висок контраст** | High contrast: Ясни цветове | Clear colors
-- **Семантична структура** | Semantic structure: Правилно използване на HTML | Proper HTML usage
-
-## Структура на файловете | File Structure
+## 📁 Структура на файловете | File Structure
 
 ```
-plovdiv-website/
+plovdiv-municipality/
 ├── index.html          # Основен HTML файл | Main HTML file
 ├── styles.css          # CSS стилове | CSS styles
 ├── script.js           # JavaScript функционалност | JavaScript functionality
 └── README.md           # Документация | Documentation
 ```
 
-## Персонализация | Customization
+## 🚀 Инсталация и стартиране | Installation & Usage
 
-### 🎨 Промяна на цветовете | Changing Colors
+### **1. Директно отваряне | Direct Opening**
+```bash
+# Отворете index.html в уеб браузър
+# Open index.html in a web browser
+```
+
+### **2. Локален сървър | Local Server**
+```bash
+# Python 3
+python -m http.server 8000
+
+# Node.js
+npx serve .
+
+# PHP
+php -S localhost:8000
+```
+
+### **3. Преглед | View**
+Отворете `http://localhost:8000` в браузъра
+Open `http://localhost:8000` in your browser
+
+## 🎨 Персонализация | Customization
+
+### **Промяна на цветовете | Changing Colors**
 Редактирайте CSS променливите в `styles.css`:
 Edit CSS variables in `styles.css`:
 
 ```css
-:root {
-    --primary-blue: #1e3a8a;
-    --primary-yellow: #fbbf24;
-    --accent-green: #10b981;
-}
+/* Основен син цвят | Main blue color */
+--primary-blue: #00a4dc;
+
+/* Допълнителни цветове | Additional colors */
+--primary-blue-dark: #0093c7;
+--text-primary: #000000;
+--background-primary: #ffffff;
 ```
 
-### 📝 Промяна на съдържанието | Changing Content
+### **Промяна на съдържанието | Changing Content**
 Редактирайте текста в `index.html`:
 Edit text in `index.html`:
 
@@ -148,39 +180,51 @@ Edit text in `index.html`:
 <p class="hero-subtitle">Вашето описание | Your Description</p>
 ```
 
-### 🔧 Добавяне на нови функции | Adding New Features
-Разширете `script.js` с нови функционалности:
-Extend `script.js` with new functionalities:
+### **Добавяне на нови секции | Adding New Sections**
+Следвайте структурата на съществуващите секции:
+Follow the structure of existing sections:
 
-```javascript
-// Нова функция | New function
-function newFeature() {
-    console.log('Нова функционалност | New functionality');
-}
+```html
+<section class="new-section">
+    <div class="container">
+        <h2 class="section-title">Нова секция | New Section</h2>
+        <!-- Съдържание | Content -->
+    </div>
+</section>
 ```
 
-## Поддръжка | Support
+## 🔧 Поддръжка | Maintenance
 
-### 🐛 Известни проблеми | Known Issues
+### **Известни проблеми | Known Issues**
 - Няма | None currently
 
-### 🔄 Бъдещи подобрения | Future Improvements
+### **Бъдещи подобрения | Future Improvements**
 - [ ] Многоезична поддръжка | Multi-language support
 - [ ] Интеграция с база данни | Database integration
 - [ ] API за динамично съдържание | API for dynamic content
 - [ ] PWA функционалност | PWA functionality
+- [ ] CMS интеграция | CMS integration
 
-## Лиценз | License
+## 📞 Поддръжка | Support
 
-Този проект е създаден за демонстрационни цели.
-This project is created for demonstration purposes.
+За техническа поддръжка и въпроси:
+For technical support and questions:
 
-## Автор | Author
+- **Имейл** | Email: info@plovdiv.bg
+- **Телефон** | Phone: +359 32 123 456
+- **Адрес** | Address: ул. "Главна" 1, 4000 Пловдив
+
+## 📄 Лиценз | License
+
+Този проект е създаден за Община Пловдив.
+This project is created for the Municipality of Plovdiv.
+
+## 👥 Автор | Author
 
 Създадено с ❤️ за Пловдив
 Created with ❤️ for Plovdiv
 
 ---
 
-**Забележка** | **Note**: Този уебсайт е демонстрационен и не е свързан с официалните институции на Пловдив.
-This website is demonstrational and is not affiliated with official Plovdiv institutions.
+**Забележка** | **Note**: Този уебсайт е официален портал на Община Пловдив и следва всички стандарти за държавни уебсайтове.
+This website is the official portal of the Municipality of Plovdiv and follows all standards for government websites.
