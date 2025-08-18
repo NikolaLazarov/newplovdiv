@@ -268,20 +268,11 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(typeWriter, 1000);
     }
 
-    // Add floating animation to coat of arms
+    // Coat of arms - no animation (static)
     const coatOfArms = document.querySelector('.coat-of-arms');
     if (coatOfArms) {
-        coatOfArms.style.animation = 'float 3s ease-in-out infinite';
-        
-        // Add CSS animation
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes float {
-                0%, 100% { transform: translateY(0px); }
-                50% { transform: translateY(-5px); }
-            }
-        `;
-        document.head.appendChild(style);
+        // Гербът остава статичен без анимация
+        // The coat of arms remains static without animation
     }
 
     console.log('Община Пловдив уебсайт зареден успешно!');
