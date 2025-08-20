@@ -68,11 +68,28 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.textContent.toLowerCase();
+            const href = this.getAttribute('href') || '';
+
+            // External or page navigation should work normally
+            if (href.startsWith('http') || href.endsWith('.html')) {
+                return;
+            }
+
+            // Anchor navigation by id
+            if (href.startsWith('#')) {
+                const targetById = document.querySelector(href);
+                if (targetById) {
+                    e.preventDefault();
+                    targetById.scrollIntoView({ behavior: 'smooth' });
+                }
+                return;
+            }
+
+            // Fallback to section by class derived from text
+            const targetId = this.textContent.trim().toLowerCase();
             const targetSection = document.querySelector(`.${targetId}-section`);
-            
             if (targetSection) {
+                e.preventDefault();
                 targetSection.scrollIntoView({ behavior: 'smooth' });
             }
         });
@@ -101,6 +118,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const servicesCounter = document.querySelector('.services-counter');
     servicesCounter.addEventListener('click', function() {
         alert('Списък с услуги - Функционалността ще бъде имплементирана');
+    });
+
+    // KAIS-like dropdowns in kais.html header
+    const kaisMenuRoots = document.querySelectorAll('.kais-nav .menu-item.has-sub');
+    kaisMenuRoots.forEach(item => {
+        item.addEventListener('mouseenter', () => item.classList.add('open'));
+        item.addEventListener('mouseleave', () => item.classList.remove('open'));
+        item.querySelector('a').addEventListener('click', (e) => {
+            // Prevent navigation for top-level items that only toggle submenu
+            if (item.classList.contains('has-sub')) {
+                e.preventDefault();
+                item.classList.toggle('open');
+            }
+        });
     });
 
     // Add hover effects for feature cards

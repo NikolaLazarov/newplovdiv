@@ -140,144 +140,16 @@ body {
     gap: 20px;
 }
 
-/* Coat of Arms Styling */
+/* Coat of Arms as image */
 .coat-of-arms {
-    position: relative;
-    width: 80px;
-    height: 100px;
     display: flex;
-    flex-direction: column;
     align-items: center;
 }
 
-.arms-shield {
-    width: 60px;
-    height: 70px;
-    border: 2px solid #000;
-    border-radius: 8px 8px 0 0;
-    overflow: hidden;
-    position: relative;
-}
-
-.arms-upper {
-    height: 40px;
-    background: #228B22;
-    position: relative;
-}
-
-.arms-lions {
-    position: relative;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 5px;
-}
-
-.lion {
-    width: 15px;
-    height: 20px;
-    background: #FFD700;
-    border-radius: 50%;
-    position: relative;
-}
-
-.lion::before {
-    content: '';
-    position: absolute;
-    top: -5px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 8px;
-    height: 8px;
-    background: #FFD700;
-    border-radius: 50%;
-}
-
-.central-crown {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 12px;
-    height: 8px;
-    background: #FF0000;
-    border-radius: 2px;
-}
-
-.arms-lower {
-    height: 30px;
-    background: #FFD700;
-    position: relative;
-}
-
-.mountains {
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    right: 5px;
-    height: 15px;
-    background: #228B22;
-    clip-path: polygon(0% 100%, 20% 60%, 40% 80%, 60% 40%, 80% 70%, 100% 50%, 100% 100%);
-}
-
-.water-lines {
-    position: absolute;
-    bottom: 5px;
-    left: 5px;
-    right: 5px;
-    height: 8px;
-}
-
-.water-lines::before,
-.water-lines::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: #0000FF;
-    border-radius: 1px;
-}
-
-.water-lines::before {
-    top: 0;
-}
-
-.water-lines::after {
-    top: 6px;
-}
-
-.arms-crown {
-    width: 50px;
-    height: 15px;
-    background: #FFD700;
-    border: 1px solid #000;
-    border-radius: 3px;
-    position: relative;
-    margin-top: 2px;
-}
-
-.arms-crown::before {
-    content: '';
-    position: absolute;
-    top: -8px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 0;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-bottom: 8px solid #FFD700;
-}
-
-.arms-motto {
-    font-size: 8px;
-    font-weight: 700;
-    color: #000;
-    text-align: center;
-    margin-top: 2px;
-    white-space: nowrap;
+.coat-of-arms-img {
+    height: 64px;
+    width: auto;
+    display: block;
 }
 
 .municipality-info {
